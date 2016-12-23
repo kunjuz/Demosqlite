@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <sqlite3.h>
 @interface ViewController : UIViewController
-
+{
+    sqlite3_stmt *statement;
+    sqlite3 *database;
+    NSMutableArray *nameArray;
+    NSMutableArray *placeArray;
+}
+@property (strong, nonatomic) IBOutlet UITextField *company;
+@property (strong, nonatomic) IBOutlet UITextField *name;
 
 @end
 
