@@ -102,6 +102,8 @@
        // sqlite3_finalize(statement);
         sqlite3_close(database);
     }
+    NSLog( @"Error: %s", sqlite3_errmsg(database) );
+
 }
 
 -(void)detail
